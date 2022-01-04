@@ -1,0 +1,4 @@
+﻿  startMenu.cpp
+G:\git\graphicsGameSnake\graphicsGameSnake\startMenu.cpp(10,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  LevelOne.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  graphicsGameSnake.vcxproj -> G:\git\graphicsGameSnake\x64\Debug\graphicsGameSnake.exe

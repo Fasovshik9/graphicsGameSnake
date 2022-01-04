@@ -1,0 +1,14 @@
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.vcxproj.AssemblyReference.cache
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.startMenu.resources
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.vcxproj.GenerateResource.cache
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.LevelOne.resources
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.LeveTwo.resources
+C:\Users\Vadim\source\repos\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.LevelThree.resources
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.vcxproj.AssemblyReference.cache
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.vcxproj.SuggestedBindingRedirects.cache
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.LevelOne.resources
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.LevelThree.resources
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.LeveTwo.resources
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.startMenu.resources
+G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.vcxproj.GenerateResource.cache

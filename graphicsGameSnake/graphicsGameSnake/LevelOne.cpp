@@ -280,6 +280,12 @@ System::Void graphicsGameSnake::LevelOne::LevelOne_FormClosing(System::Object^ s
 	return System::Void();
 }
 
+System::Void graphicsGameSnake::LevelOne::buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Close();
+	return System::Void();
+}
+
 
 System::Void graphicsGameSnake::LevelOne::LevelOne_Load(System::Object^ sender, System::EventArgs^ e)
 {

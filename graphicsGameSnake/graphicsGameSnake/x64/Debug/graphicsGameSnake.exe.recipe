@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>G:\git\graphicsGameSnake\x64\Debug\graphicsGameSnake.exe</FullPath>
+      <FullPath>G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

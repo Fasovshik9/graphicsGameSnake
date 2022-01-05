@@ -280,6 +280,12 @@ System::Void graphicsGameSnake::LeveTwo::LeveTwo_FormClosing(System::Object^ sen
 	return System::Void();
 }
 
+System::Void graphicsGameSnake::LeveTwo::buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Close();
+	return System::Void();
+}
+
 
 System::Void graphicsGameSnake::LeveTwo::LeveTwo_Load(System::Object^ sender, System::EventArgs^ e)
 {

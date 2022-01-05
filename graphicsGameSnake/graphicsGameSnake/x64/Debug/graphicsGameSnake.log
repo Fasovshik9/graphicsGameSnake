@@ -1,4 +1,11 @@
-﻿  startMenu.cpp
-G:\git\graphicsGameSnake\graphicsGameSnake\startMenu.cpp(10,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+﻿  LevelOne.cpp
+G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelOne.cpp(19,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
+G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelOne.cpp(144,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  LevelThree.cpp
+G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(19,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
+G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(144,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  startMenu.cpp
+G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\startMenu.cpp(10,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Generating Code...
   LevelOne.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  graphicsGameSnake.vcxproj -> G:\git\graphicsGameSnake\x64\Debug\graphicsGameSnake.exe
+  graphicsGameSnake.vcxproj -> G:\git\graphicsGameSnake\graphicsGameSnake\x64\Debug\graphicsGameSnake.exe

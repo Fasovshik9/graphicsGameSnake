@@ -42,6 +42,7 @@ namespace graphicsGameSnake {
 	private: System::Windows::Forms::Label^ labelScore;
 	private: System::Windows::Forms::Timer^ timer1;
 	private: System::Windows::Forms::Label^ labelScoreNeed;
+	private: System::Windows::Forms::Button^ buttonBackToMenu;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -67,6 +68,7 @@ namespace graphicsGameSnake {
 			this->labelScore = (gcnew System::Windows::Forms::Label());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->labelScoreNeed = (gcnew System::Windows::Forms::Label());
+			this->buttonBackToMenu = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RightWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerWall))->BeginInit();
@@ -75,7 +77,7 @@ namespace graphicsGameSnake {
 			// 
 			// buttonStart
 			// 
-			this->buttonStart->Location = System::Drawing::Point(120, 522);
+			this->buttonStart->Location = System::Drawing::Point(244, 475);
 			this->buttonStart->Name = L"buttonStart";
 			this->buttonStart->Size = System::Drawing::Size(101, 23);
 			this->buttonStart->TabIndex = 31;
@@ -86,7 +88,7 @@ namespace graphicsGameSnake {
 			// RightWall
 			// 
 			this->RightWall->BackColor = System::Drawing::Color::Gray;
-			this->RightWall->Location = System::Drawing::Point(380, 100);
+			this->RightWall->Location = System::Drawing::Point(380, 60);
 			this->RightWall->Name = L"RightWall";
 			this->RightWall->Size = System::Drawing::Size(20, 400);
 			this->RightWall->TabIndex = 29;
@@ -95,7 +97,7 @@ namespace graphicsGameSnake {
 			// LeftWall
 			// 
 			this->LeftWall->BackColor = System::Drawing::Color::Gray;
-			this->LeftWall->Location = System::Drawing::Point(0, 100);
+			this->LeftWall->Location = System::Drawing::Point(0, 60);
 			this->LeftWall->Name = L"LeftWall";
 			this->LeftWall->Size = System::Drawing::Size(20, 400);
 			this->LeftWall->TabIndex = 28;
@@ -104,7 +106,7 @@ namespace graphicsGameSnake {
 			// LowerWall
 			// 
 			this->LowerWall->BackColor = System::Drawing::Color::Gray;
-			this->LowerWall->Location = System::Drawing::Point(0, 480);
+			this->LowerWall->Location = System::Drawing::Point(0, 440);
 			this->LowerWall->Name = L"LowerWall";
 			this->LowerWall->Size = System::Drawing::Size(400, 20);
 			this->LowerWall->TabIndex = 27;
@@ -113,7 +115,7 @@ namespace graphicsGameSnake {
 			// UpperWall
 			// 
 			this->UpperWall->BackColor = System::Drawing::Color::Gray;
-			this->UpperWall->Location = System::Drawing::Point(0, 100);
+			this->UpperWall->Location = System::Drawing::Point(0, 60);
 			this->UpperWall->Name = L"UpperWall";
 			this->UpperWall->Size = System::Drawing::Size(400, 20);
 			this->UpperWall->TabIndex = 26;
@@ -124,7 +126,7 @@ namespace graphicsGameSnake {
 			this->labelScore->AutoSize = true;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelScore->Location = System::Drawing::Point(54, 35);
+			this->labelScore->Location = System::Drawing::Point(12, 9);
 			this->labelScore->Name = L"labelScore";
 			this->labelScore->Size = System::Drawing::Size(57, 20);
 			this->labelScore->TabIndex = 25;
@@ -139,17 +141,28 @@ namespace graphicsGameSnake {
 			this->labelScoreNeed->AutoSize = true;
 			this->labelScoreNeed->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelScoreNeed->Location = System::Drawing::Point(54, 55);
+			this->labelScoreNeed->Location = System::Drawing::Point(12, 29);
 			this->labelScoreNeed->Name = L"labelScoreNeed";
 			this->labelScoreNeed->Size = System::Drawing::Size(57, 20);
 			this->labelScoreNeed->TabIndex = 32;
 			this->labelScoreNeed->Text = L"label1";
 			// 
+			// buttonBackToMenu
+			// 
+			this->buttonBackToMenu->Location = System::Drawing::Point(153, 504);
+			this->buttonBackToMenu->Name = L"buttonBackToMenu";
+			this->buttonBackToMenu->Size = System::Drawing::Size(101, 23);
+			this->buttonBackToMenu->TabIndex = 33;
+			this->buttonBackToMenu->Text = L"Back to the menu";
+			this->buttonBackToMenu->UseVisualStyleBackColor = true;
+			this->buttonBackToMenu->Click += gcnew System::EventHandler(this, &LevelThree::buttonBackToMenu_Click);
+			// 
 			// LevelThree
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(400, 557);
+			this->ClientSize = System::Drawing::Size(400, 539);
+			this->Controls->Add(this->buttonBackToMenu);
 			this->Controls->Add(this->buttonStart);
 			this->Controls->Add(this->RightWall);
 			this->Controls->Add(this->LeftWall);
@@ -205,5 +218,6 @@ namespace graphicsGameSnake {
 	private: System::Void LevelThree_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void LevelThree_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e);
 	private: System::Void LevelThree_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
+	private: System::Void buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

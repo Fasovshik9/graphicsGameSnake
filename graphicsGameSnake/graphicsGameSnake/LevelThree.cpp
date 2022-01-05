@@ -280,6 +280,12 @@ System::Void graphicsGameSnake::LevelThree::LevelThree_FormClosing(System::Objec
 	return System::Void();
 }
 
+System::Void graphicsGameSnake::LevelThree::buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Close();
+	return System::Void();
+}
+
 
 System::Void graphicsGameSnake::LevelThree::LevelThree_Load(System::Object^ sender, System::EventArgs^ e)
 {

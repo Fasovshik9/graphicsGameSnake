@@ -78,11 +78,11 @@ namespace graphicsGameSnake {
 			// 
 			// buttonStart
 			// 
-			this->buttonStart->Location = System::Drawing::Point(192, 425);
+			this->buttonStart->Location = System::Drawing::Point(120, 410);
 			this->buttonStart->Name = L"buttonStart";
 			this->buttonStart->Size = System::Drawing::Size(101, 23);
 			this->buttonStart->TabIndex = 23;
-			this->buttonStart->Text = L"Start new game";
+			this->buttonStart->Text = L"Start game";
 			this->buttonStart->UseVisualStyleBackColor = true;
 			this->buttonStart->Click += gcnew System::EventHandler(this, &LeveTwo::buttonStart_Click);
 			// 
@@ -127,11 +127,11 @@ namespace graphicsGameSnake {
 			this->labelScore->AutoSize = true;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelScore->Location = System::Drawing::Point(12, 9);
+			this->labelScore->Location = System::Drawing::Point(51, 9);
 			this->labelScore->Name = L"labelScore";
-			this->labelScore->Size = System::Drawing::Size(57, 20);
+			this->labelScore->Size = System::Drawing::Size(81, 20);
 			this->labelScore->TabIndex = 17;
-			this->labelScore->Text = L"label1";
+			this->labelScore->Text = L"Score : 0";
 			// 
 			// timerLevelTwo
 			// 
@@ -144,13 +144,13 @@ namespace graphicsGameSnake {
 				static_cast<System::Byte>(0)));
 			this->labelScoreNeed->Location = System::Drawing::Point(12, 29);
 			this->labelScoreNeed->Name = L"labelScoreNeed";
-			this->labelScoreNeed->Size = System::Drawing::Size(57, 20);
+			this->labelScoreNeed->Size = System::Drawing::Size(105, 20);
 			this->labelScoreNeed->TabIndex = 24;
-			this->labelScoreNeed->Text = L"label1";
+			this->labelScoreNeed->Text = L"Need score:";
 			// 
 			// buttonBackToMenu
 			// 
-			this->buttonBackToMenu->Location = System::Drawing::Point(114, 468);
+			this->buttonBackToMenu->Location = System::Drawing::Point(120, 450);
 			this->buttonBackToMenu->Name = L"buttonBackToMenu";
 			this->buttonBackToMenu->Size = System::Drawing::Size(101, 23);
 			this->buttonBackToMenu->TabIndex = 25;
@@ -162,7 +162,7 @@ namespace graphicsGameSnake {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(340, 514);
+			this->ClientSize = System::Drawing::Size(340, 485);
 			this->Controls->Add(this->buttonBackToMenu);
 			this->Controls->Add(this->buttonStart);
 			this->Controls->Add(this->RightWall);

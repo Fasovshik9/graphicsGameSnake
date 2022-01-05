@@ -29,7 +29,6 @@ graphicsGameSnake::LeveTwo::LeveTwo(void)
 	vecGameField.X = RightWall->Location.X;
 	vecGameField.Y = LowerWall->Location.Y;
 	vFirstGame = true;
-	startNewGame();
 }
 
 void graphicsGameSnake::LeveTwo::fruitGeneration()
@@ -289,12 +288,14 @@ System::Void graphicsGameSnake::LeveTwo::buttonBackToMenu_Click(System::Object^ 
 
 System::Void graphicsGameSnake::LeveTwo::LeveTwo_Load(System::Object^ sender, System::EventArgs^ e)
 {
+	buttonStart->Text = "Start game";
 	labelScoreNeed->Text = "Need score: " + vVictoryGamingScore;
 	return System::Void();
 }
 
 System::Void graphicsGameSnake::LeveTwo::buttonStart_Click(System::Object^ sender, System::EventArgs^ e)
 {
+	buttonStart->Text = "Start new game";
 	vGameVictory = false;
 	timerLevelTwo->Start();
 	vPlayGame = true;

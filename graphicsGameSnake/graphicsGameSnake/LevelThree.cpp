@@ -29,7 +29,6 @@ graphicsGameSnake::LevelThree::LevelThree(void)
 	vecGameField.X = RightWall->Location.X;
 	vecGameField.Y = LowerWall->Location.Y;
 	vFirstGame = true;
-	startNewGame();
 }
 
 void graphicsGameSnake::LevelThree::fruitGeneration()
@@ -289,12 +288,14 @@ System::Void graphicsGameSnake::LevelThree::buttonBackToMenu_Click(System::Objec
 
 System::Void graphicsGameSnake::LevelThree::LevelThree_Load(System::Object^ sender, System::EventArgs^ e)
 {
+	buttonStart->Text = "Start game";
 	labelScoreNeed->Text = "Need score: " + vVictoryGamingScore;
 	return System::Void();
 }
 
 System::Void graphicsGameSnake::LevelThree::buttonStart_Click(System::Object^ sender, System::EventArgs^ e)
 {
+	buttonStart->Text = "Start new game";
 	vGameVictory = false;
 	timer1->Start();
 	vPlayGame = true;

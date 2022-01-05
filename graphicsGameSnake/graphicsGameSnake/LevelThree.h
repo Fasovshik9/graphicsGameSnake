@@ -77,7 +77,7 @@ namespace graphicsGameSnake {
 			// 
 			// buttonStart
 			// 
-			this->buttonStart->Location = System::Drawing::Point(244, 475);
+			this->buttonStart->Location = System::Drawing::Point(153, 475);
 			this->buttonStart->Name = L"buttonStart";
 			this->buttonStart->Size = System::Drawing::Size(101, 23);
 			this->buttonStart->TabIndex = 31;
@@ -126,11 +126,11 @@ namespace graphicsGameSnake {
 			this->labelScore->AutoSize = true;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelScore->Location = System::Drawing::Point(12, 9);
+			this->labelScore->Location = System::Drawing::Point(56, 9);
 			this->labelScore->Name = L"labelScore";
-			this->labelScore->Size = System::Drawing::Size(57, 20);
+			this->labelScore->Size = System::Drawing::Size(76, 20);
 			this->labelScore->TabIndex = 25;
-			this->labelScore->Text = L"label1";
+			this->labelScore->Text = L"Score: 0";
 			// 
 			// timer1
 			// 
@@ -143,13 +143,13 @@ namespace graphicsGameSnake {
 				static_cast<System::Byte>(0)));
 			this->labelScoreNeed->Location = System::Drawing::Point(12, 29);
 			this->labelScoreNeed->Name = L"labelScoreNeed";
-			this->labelScoreNeed->Size = System::Drawing::Size(57, 20);
+			this->labelScoreNeed->Size = System::Drawing::Size(105, 20);
 			this->labelScoreNeed->TabIndex = 32;
-			this->labelScoreNeed->Text = L"label1";
+			this->labelScoreNeed->Text = L"Need score:";
 			// 
 			// buttonBackToMenu
 			// 
-			this->buttonBackToMenu->Location = System::Drawing::Point(153, 504);
+			this->buttonBackToMenu->Location = System::Drawing::Point(153, 510);
 			this->buttonBackToMenu->Name = L"buttonBackToMenu";
 			this->buttonBackToMenu->Size = System::Drawing::Size(101, 23);
 			this->buttonBackToMenu->TabIndex = 33;

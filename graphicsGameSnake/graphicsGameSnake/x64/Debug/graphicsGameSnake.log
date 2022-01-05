@@ -1,10 +1,4 @@
-﻿  LeveTwo.cpp
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LeveTwo.cpp(19,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LeveTwo.cpp(143,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  LevelOne.cpp
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelOne.cpp(19,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelOne.cpp(143,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  LevelThree.cpp
+﻿  LevelThree.cpp
 G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(19,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
 G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(143,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   startMenu.cpp

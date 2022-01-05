@@ -79,17 +79,25 @@ namespace graphicsGameSnake {
 			// 
 			// buttonStart
 			// 
-			this->buttonStart->Location = System::Drawing::Point(93, 355);
+			this->buttonStart->BackColor = System::Drawing::Color::Transparent;
+			this->buttonStart->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->buttonStart->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gray;
+			this->buttonStart->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonStart->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonStart->ForeColor = System::Drawing::Color::Transparent;
+			this->buttonStart->Location = System::Drawing::Point(75, 363);
 			this->buttonStart->Name = L"buttonStart";
-			this->buttonStart->Size = System::Drawing::Size(101, 23);
+			this->buttonStart->Size = System::Drawing::Size(137, 26);
 			this->buttonStart->TabIndex = 15;
 			this->buttonStart->Text = L"Start game";
-			this->buttonStart->UseVisualStyleBackColor = true;
+			this->buttonStart->UseVisualStyleBackColor = false;
 			this->buttonStart->Click += gcnew System::EventHandler(this, &LevelOne::buttonStart_Click);
 			// 
 			// RightWall
 			// 
 			this->RightWall->BackColor = System::Drawing::Color::Gray;
+			this->RightWall->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"RightWall.BackgroundImage")));
 			this->RightWall->Location = System::Drawing::Point(280, 60);
 			this->RightWall->Name = L"RightWall";
 			this->RightWall->Size = System::Drawing::Size(20, 280);
@@ -99,6 +107,7 @@ namespace graphicsGameSnake {
 			// LeftWall
 			// 
 			this->LeftWall->BackColor = System::Drawing::Color::Gray;
+			this->LeftWall->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"LeftWall.BackgroundImage")));
 			this->LeftWall->Location = System::Drawing::Point(0, 60);
 			this->LeftWall->Name = L"LeftWall";
 			this->LeftWall->Size = System::Drawing::Size(20, 280);
@@ -108,6 +117,7 @@ namespace graphicsGameSnake {
 			// LowerWall
 			// 
 			this->LowerWall->BackColor = System::Drawing::Color::Gray;
+			this->LowerWall->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"LowerWall.BackgroundImage")));
 			this->LowerWall->Location = System::Drawing::Point(0, 320);
 			this->LowerWall->Name = L"LowerWall";
 			this->LowerWall->Size = System::Drawing::Size(300, 20);
@@ -117,6 +127,7 @@ namespace graphicsGameSnake {
 			// UpperWall
 			// 
 			this->UpperWall->BackColor = System::Drawing::Color::Gray;
+			this->UpperWall->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"UpperWall.BackgroundImage")));
 			this->UpperWall->Location = System::Drawing::Point(0, 60);
 			this->UpperWall->Name = L"UpperWall";
 			this->UpperWall->Size = System::Drawing::Size(300, 20);
@@ -126,6 +137,7 @@ namespace graphicsGameSnake {
 			// labelScore
 			// 
 			this->labelScore->AutoSize = true;
+			this->labelScore->BackColor = System::Drawing::Color::Transparent;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelScore->Location = System::Drawing::Point(56, 9);
@@ -141,6 +153,7 @@ namespace graphicsGameSnake {
 			// labelScoreNeed
 			// 
 			this->labelScoreNeed->AutoSize = true;
+			this->labelScoreNeed->BackColor = System::Drawing::Color::Transparent;
 			this->labelScoreNeed->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelScoreNeed->Location = System::Drawing::Point(12, 29);
@@ -151,18 +164,27 @@ namespace graphicsGameSnake {
 			// 
 			// buttonBackToMenu
 			// 
-			this->buttonBackToMenu->Location = System::Drawing::Point(93, 395);
+			this->buttonBackToMenu->BackColor = System::Drawing::Color::Transparent;
+			this->buttonBackToMenu->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->buttonBackToMenu->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gray;
+			this->buttonBackToMenu->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonBackToMenu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonBackToMenu->ForeColor = System::Drawing::Color::Transparent;
+			this->buttonBackToMenu->Location = System::Drawing::Point(75, 395);
 			this->buttonBackToMenu->Name = L"buttonBackToMenu";
-			this->buttonBackToMenu->Size = System::Drawing::Size(101, 23);
+			this->buttonBackToMenu->Size = System::Drawing::Size(137, 23);
 			this->buttonBackToMenu->TabIndex = 17;
 			this->buttonBackToMenu->Text = L"Back to the menu";
-			this->buttonBackToMenu->UseVisualStyleBackColor = true;
+			this->buttonBackToMenu->UseVisualStyleBackColor = false;
 			this->buttonBackToMenu->Click += gcnew System::EventHandler(this, &LevelOne::buttonBackToMenu_Click);
 			// 
 			// LevelOne
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(300, 430);
 			this->Controls->Add(this->buttonBackToMenu);
 			this->Controls->Add(this->labelScoreNeed);

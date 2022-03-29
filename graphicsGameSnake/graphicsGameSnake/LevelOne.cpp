@@ -1,4 +1,4 @@
-#include "LevelOne.h"
+﻿#include "LevelOne.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -61,7 +61,7 @@ void graphicsGameSnake::LevelOne::feedingSnake()
 	if (aSnake[0]->Location.X == positionFruit.X && aSnake[0]->Location.Y == positionFruit.Y)
 	{
 		timerLevelOne->Interval -= vEveryEatingSpead;
-		labelScore->Text = "Score: " + ++vGamingScore;
+		labelScore->Text = "" + ++vGamingScore;
 		if (vGamingScore == vVictoryGamingScore)
 		{
 			vGameVictory = true;
@@ -150,7 +150,7 @@ void graphicsGameSnake::LevelOne::startNewGame()
 	vPlayGame = true;
 	vSnakeDie = false;
 
-	labelScore->Text = "Score: 0";
+	labelScore->Text = "0";
 
 }
 
@@ -171,7 +171,7 @@ void graphicsGameSnake::LevelOne::LevelOne_Update(Object^ object, EventArgs^ e)
 	if (vGameVictory)
 	{
 		timerLevelOne->Stop();
-		MessageBox::Show("You are VICTORY!", "Attention!");
+		MessageBox::Show("VICTORY!", "Attention!");
 	}
 	else if (!vSnakeDie && vPlayGame)
 	{
@@ -288,14 +288,12 @@ System::Void graphicsGameSnake::LevelOne::buttonBackToMenu_Click(System::Object^
 
 System::Void graphicsGameSnake::LevelOne::LevelOne_Load(System::Object^ sender, System::EventArgs^ e)
 {
-	buttonStart->Text = "Start game";
-	labelScoreNeed->Text = "Need score: " + vVictoryGamingScore;
+	labelScoreNeed->Text = "" + vVictoryGamingScore;
 	return System::Void();
 }
 
 System::Void graphicsGameSnake::LevelOne::buttonStart_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	buttonStart->Text = "Start new game";
 	vGameVictory = false;
 	timerLevelOne->Start();
 	vPlayGame = true;

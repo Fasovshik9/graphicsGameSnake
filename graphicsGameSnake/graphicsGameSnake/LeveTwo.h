@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 namespace graphicsGameSnake {
 
@@ -44,6 +44,8 @@ namespace graphicsGameSnake {
 
 	private: System::Windows::Forms::Label^ labelScoreNeed;
 	private: System::Windows::Forms::Button^ buttonBackToMenu;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label1;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -70,6 +72,8 @@ namespace graphicsGameSnake {
 			this->timerLevelTwo = (gcnew System::Windows::Forms::Timer(this->components));
 			this->labelScoreNeed = (gcnew System::Windows::Forms::Label());
 			this->buttonBackToMenu = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RightWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerWall))->BeginInit();
@@ -88,7 +92,7 @@ namespace graphicsGameSnake {
 			this->buttonStart->Name = L"buttonStart";
 			this->buttonStart->Size = System::Drawing::Size(141, 27);
 			this->buttonStart->TabIndex = 23;
-			this->buttonStart->Text = L"Start game";
+			this->buttonStart->Text = L"Начать игру";
 			this->buttonStart->UseVisualStyleBackColor = false;
 			this->buttonStart->Click += gcnew System::EventHandler(this, &LeveTwo::buttonStart_Click);
 			// 
@@ -139,11 +143,11 @@ namespace graphicsGameSnake {
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelScore->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->labelScore->Location = System::Drawing::Point(55, 9);
+			this->labelScore->Location = System::Drawing::Point(95, 9);
 			this->labelScore->Name = L"labelScore";
-			this->labelScore->Size = System::Drawing::Size(76, 20);
+			this->labelScore->Size = System::Drawing::Size(19, 20);
 			this->labelScore->TabIndex = 17;
-			this->labelScore->Text = L"Score: 0";
+			this->labelScore->Text = L"0";
 			// 
 			// timerLevelTwo
 			// 
@@ -156,11 +160,11 @@ namespace graphicsGameSnake {
 			this->labelScoreNeed->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelScoreNeed->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->labelScoreNeed->Location = System::Drawing::Point(12, 29);
+			this->labelScoreNeed->Location = System::Drawing::Point(95, 29);
 			this->labelScoreNeed->Name = L"labelScoreNeed";
-			this->labelScoreNeed->Size = System::Drawing::Size(105, 20);
+			this->labelScoreNeed->Size = System::Drawing::Size(19, 20);
 			this->labelScoreNeed->TabIndex = 24;
-			this->labelScoreNeed->Text = L"Need score:";
+			this->labelScoreNeed->Text = L"0";
 			// 
 			// buttonBackToMenu
 			// 
@@ -174,9 +178,33 @@ namespace graphicsGameSnake {
 			this->buttonBackToMenu->Name = L"buttonBackToMenu";
 			this->buttonBackToMenu->Size = System::Drawing::Size(141, 27);
 			this->buttonBackToMenu->TabIndex = 25;
-			this->buttonBackToMenu->Text = L"Back to the menu";
+			this->buttonBackToMenu->Text = L"Назад в меню";
 			this->buttonBackToMenu->UseVisualStyleBackColor = false;
 			this->buttonBackToMenu->Click += gcnew System::EventHandler(this, &LeveTwo::buttonBackToMenu_Click);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(34, 9);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(61, 20);
+			this->label2->TabIndex = 37;
+			this->label2->Text = L"Очки: ";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(34, 29);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(58, 20);
+			this->label1->TabIndex = 36;
+			this->label1->Text = L"Цель:";
 			// 
 			// LeveTwo
 			// 
@@ -184,6 +212,8 @@ namespace graphicsGameSnake {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(340, 485);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->buttonBackToMenu);
 			this->Controls->Add(this->buttonStart);
 			this->Controls->Add(this->RightWall);

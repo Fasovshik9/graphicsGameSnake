@@ -37,8 +37,8 @@ System::Void graphicsGameSnake::startMenu::buttonStartLevelOne_Click(System::Obj
 
 System::Void graphicsGameSnake::startMenu::buttonReference_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	MessageBox::Show("\tWelcome to the SNAKE game!\nThe rules are very simple, you need to use the control keys\n\
-w - up\ns - dawn\na - left\nd - right\n feed the snake with apples, GOOD LUCK!", "Reference!");
+	labelMenu->Visible = false;
+	panelRef->Visible = true;
 	return System::Void();
 }
 
@@ -65,3 +65,12 @@ System::Void graphicsGameSnake::startMenu::buttonStartLevelThree_Click(System::O
 	this->Show();
 	return System::Void();
 }
+
+System::Void graphicsGameSnake::startMenu::buttonCloseRef_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	panelRef->Visible = false;
+	labelMenu->Visible = true;
+	return System::Void();
+}
+
+

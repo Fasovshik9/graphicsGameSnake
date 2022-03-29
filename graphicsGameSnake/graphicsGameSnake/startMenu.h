@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 namespace graphicsGameSnake {
 
@@ -34,8 +34,13 @@ namespace graphicsGameSnake {
 	private: System::Windows::Forms::Button^ buttonStartLevelThree;
 	private: System::Windows::Forms::Button^ buttonReference;
 	private: System::Windows::Forms::Button^ buttonExit;
+	private: System::Windows::Forms::Panel^ panelRef;
 
-	protected:
+	private: System::Windows::Forms::RichTextBox^ commentField;
+	private: System::Windows::Forms::Button^ buttonCloseRef;
+	private: System::Windows::Forms::Label^ labelMenu;
+
+
 
 
 
@@ -62,6 +67,11 @@ namespace graphicsGameSnake {
 			this->buttonStartLevelThree = (gcnew System::Windows::Forms::Button());
 			this->buttonReference = (gcnew System::Windows::Forms::Button());
 			this->buttonExit = (gcnew System::Windows::Forms::Button());
+			this->panelRef = (gcnew System::Windows::Forms::Panel());
+			this->buttonCloseRef = (gcnew System::Windows::Forms::Button());
+			this->commentField = (gcnew System::Windows::Forms::RichTextBox());
+			this->labelMenu = (gcnew System::Windows::Forms::Label());
+			this->panelRef->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// buttonStartLevelOne
@@ -72,7 +82,7 @@ namespace graphicsGameSnake {
 			this->buttonStartLevelOne->Name = L"buttonStartLevelOne";
 			this->buttonStartLevelOne->Size = System::Drawing::Size(107, 23);
 			this->buttonStartLevelOne->TabIndex = 7;
-			this->buttonStartLevelOne->Text = L"Start level one";
+			this->buttonStartLevelOne->Text = L"Первый уровень";
 			this->buttonStartLevelOne->UseVisualStyleBackColor = false;
 			this->buttonStartLevelOne->Click += gcnew System::EventHandler(this, &startMenu::buttonStartLevelOne_Click);
 			// 
@@ -84,7 +94,7 @@ namespace graphicsGameSnake {
 			this->buttonStartLevelTwo->Name = L"buttonStartLevelTwo";
 			this->buttonStartLevelTwo->Size = System::Drawing::Size(107, 23);
 			this->buttonStartLevelTwo->TabIndex = 9;
-			this->buttonStartLevelTwo->Text = L"Start level two";
+			this->buttonStartLevelTwo->Text = L"Второй уровень";
 			this->buttonStartLevelTwo->UseVisualStyleBackColor = false;
 			this->buttonStartLevelTwo->Click += gcnew System::EventHandler(this, &startMenu::buttonStartLevelTwo_Click);
 			// 
@@ -96,7 +106,7 @@ namespace graphicsGameSnake {
 			this->buttonStartLevelThree->Name = L"buttonStartLevelThree";
 			this->buttonStartLevelThree->Size = System::Drawing::Size(107, 23);
 			this->buttonStartLevelThree->TabIndex = 10;
-			this->buttonStartLevelThree->Text = L"Start level three";
+			this->buttonStartLevelThree->Text = L"Третий уровень";
 			this->buttonStartLevelThree->UseVisualStyleBackColor = false;
 			this->buttonStartLevelThree->Click += gcnew System::EventHandler(this, &startMenu::buttonStartLevelThree_Click);
 			// 
@@ -109,7 +119,7 @@ namespace graphicsGameSnake {
 			this->buttonReference->Name = L"buttonReference";
 			this->buttonReference->Size = System::Drawing::Size(107, 23);
 			this->buttonReference->TabIndex = 11;
-			this->buttonReference->Text = L"Reference";
+			this->buttonReference->Text = L"О программе";
 			this->buttonReference->UseVisualStyleBackColor = false;
 			this->buttonReference->Click += gcnew System::EventHandler(this, &startMenu::buttonReference_Click);
 			// 
@@ -122,9 +132,59 @@ namespace graphicsGameSnake {
 			this->buttonExit->Name = L"buttonExit";
 			this->buttonExit->Size = System::Drawing::Size(107, 23);
 			this->buttonExit->TabIndex = 12;
-			this->buttonExit->Text = L"Exit";
+			this->buttonExit->Text = L"Выход";
 			this->buttonExit->UseVisualStyleBackColor = false;
 			this->buttonExit->Click += gcnew System::EventHandler(this, &startMenu::buttonExit_Click);
+			// 
+			// panelRef
+			// 
+			this->panelRef->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panelRef->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->panelRef->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelRef.BackgroundImage")));
+			this->panelRef->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panelRef->Controls->Add(this->buttonCloseRef);
+			this->panelRef->Controls->Add(this->commentField);
+			this->panelRef->Location = System::Drawing::Point(0, 0);
+			this->panelRef->Name = L"panelRef";
+			this->panelRef->Size = System::Drawing::Size(435, 361);
+			this->panelRef->TabIndex = 13;
+			this->panelRef->Visible = false;
+			// 
+			// buttonCloseRef
+			// 
+			this->buttonCloseRef->Location = System::Drawing::Point(181, 267);
+			this->buttonCloseRef->Name = L"buttonCloseRef";
+			this->buttonCloseRef->Size = System::Drawing::Size(75, 23);
+			this->buttonCloseRef->TabIndex = 23;
+			this->buttonCloseRef->Text = L"Назад";
+			this->buttonCloseRef->UseVisualStyleBackColor = true;
+			this->buttonCloseRef->Click += gcnew System::EventHandler(this, &startMenu::buttonCloseRef_Click);
+			// 
+			// commentField
+			// 
+			this->commentField->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->commentField->BackColor = System::Drawing::SystemColors::ScrollBar;
+			this->commentField->Location = System::Drawing::Point(110, 30);
+			this->commentField->Name = L"commentField";
+			this->commentField->Size = System::Drawing::Size(226, 174);
+			this->commentField->TabIndex = 22;
+			this->commentField->Text = resources->GetString(L"commentField.Text");
+			// 
+			// labelMenu
+			// 
+			this->labelMenu->AutoSize = true;
+			this->labelMenu->BackColor = System::Drawing::Color::Transparent;
+			this->labelMenu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelMenu->ForeColor = System::Drawing::Color::LightSteelBlue;
+			this->labelMenu->Location = System::Drawing::Point(174, 39);
+			this->labelMenu->Name = L"labelMenu";
+			this->labelMenu->Size = System::Drawing::Size(74, 25);
+			this->labelMenu->TabIndex = 14;
+			this->labelMenu->Text = L"Меню";
 			// 
 			// startMenu
 			// 
@@ -133,6 +193,8 @@ namespace graphicsGameSnake {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(434, 361);
+			this->Controls->Add(this->labelMenu);
+			this->Controls->Add(this->panelRef);
 			this->Controls->Add(this->buttonExit);
 			this->Controls->Add(this->buttonReference);
 			this->Controls->Add(this->buttonStartLevelThree);
@@ -142,11 +204,14 @@ namespace graphicsGameSnake {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->KeyPreview = true;
+			this->MaximizeBox = false;
 			this->Name = L"startMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"startMenu";
 			this->Load += gcnew System::EventHandler(this, &startMenu::startMenu_Load);
+			this->panelRef->ResumeLayout(false);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -156,6 +221,7 @@ namespace graphicsGameSnake {
 	private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void buttonStartLevelTwo_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void buttonStartLevelThree_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonCloseRef_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
 

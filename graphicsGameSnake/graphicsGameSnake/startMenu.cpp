@@ -37,6 +37,11 @@ System::Void graphicsGameSnake::startMenu::buttonStartLevelOne_Click(System::Obj
 
 System::Void graphicsGameSnake::startMenu::buttonReference_Click(System::Object^ sender, System::EventArgs^ e)
 {
+	labelDethName->Visible = false;
+	labelDeth->Visible = false;
+	labelWinLevelOne->Visible = false;
+	labelWinLevelTwo->Visible = false;
+	labelWinLevelThree->Visible = false;
 	labelMenu->Visible = false;
 	panelRef->Visible = true;
 	return System::Void();
@@ -70,6 +75,11 @@ System::Void graphicsGameSnake::startMenu::buttonCloseRef_Click(System::Object^ 
 {
 	panelRef->Visible = false;
 	labelMenu->Visible = true;
+	labelDethName->Visible = true;
+	labelDeth->Visible = true;
+	labelWinLevelOne->Visible = true;
+	labelWinLevelTwo->Visible = true;
+	labelWinLevelThree->Visible = true;
 	return System::Void();
 }
 

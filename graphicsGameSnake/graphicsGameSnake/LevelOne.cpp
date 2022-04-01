@@ -1,4 +1,6 @@
 ﻿#include "LevelOne.h"
+#include "startMenu.h"
+
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -170,6 +172,8 @@ void graphicsGameSnake::LevelOne::LevelOne_Update(Object^ object, EventArgs^ e)
 {
 	if (vGameVictory)
 	{
+		startMenu::labelWinLevelOne->Text = "+";
+		startMenu::labelWinLevelOne->ForeColor = System::Drawing::Color::Green;
 		timerLevelOne->Stop();
 		MessageBox::Show("VICTORY!", "Attention!");
 	}
@@ -182,6 +186,8 @@ void graphicsGameSnake::LevelOne::LevelOne_Update(Object^ object, EventArgs^ e)
 	}
 	else if (vSnakeDie && vPlayGame)
 	{
+		startMenu::GLDeth +=1;
+		startMenu::labelDeth->Text = "" + startMenu::GLDeth;
 		timerLevelOne->Stop();
 		MessageBox::Show("Game over!", "Attention!");
 	}

@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+
+
 namespace graphicsGameSnake {
 
 	using namespace System;
@@ -16,7 +18,7 @@ namespace graphicsGameSnake {
 	{
 	public:
 		startMenu(void);
-
+		
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -39,6 +41,42 @@ namespace graphicsGameSnake {
 	private: System::Windows::Forms::RichTextBox^ commentField;
 	private: System::Windows::Forms::Button^ buttonCloseRef;
 	private: System::Windows::Forms::Label^ labelMenu;
+	public:
+		static int GLDeth = 0;
+		static  System::Windows::Forms::Label^ labelWinLevelOne;
+		static  System::Windows::Forms::Label^ labelWinLevelTwo;
+		static  System::Windows::Forms::Label^ labelWinLevelThree;
+		static  System::Windows::Forms::Label^ labelDeth;
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::Label^ labelDethName;
+	public:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private:
+
+
+	private:
+	public:
 
 
 
@@ -71,6 +109,11 @@ namespace graphicsGameSnake {
 			this->buttonCloseRef = (gcnew System::Windows::Forms::Button());
 			this->commentField = (gcnew System::Windows::Forms::RichTextBox());
 			this->labelMenu = (gcnew System::Windows::Forms::Label());
+			this->labelDethName = (gcnew System::Windows::Forms::Label());
+			this->labelDeth = (gcnew System::Windows::Forms::Label());
+			this->labelWinLevelOne = (gcnew System::Windows::Forms::Label());
+			this->labelWinLevelTwo = (gcnew System::Windows::Forms::Label());
+			this->labelWinLevelThree = (gcnew System::Windows::Forms::Label());
 			this->panelRef->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -186,6 +229,78 @@ namespace graphicsGameSnake {
 			this->labelMenu->TabIndex = 14;
 			this->labelMenu->Text = L"Меню";
 			// 
+			// labelDethName
+			// 
+			this->labelDethName->AutoSize = true;
+			this->labelDethName->BackColor = System::Drawing::Color::Transparent;
+			this->labelDethName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelDethName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->labelDethName->Location = System::Drawing::Point(12, 9);
+			this->labelDethName->Name = L"labelDethName";
+			this->labelDethName->Size = System::Drawing::Size(101, 25);
+			this->labelDethName->TabIndex = 15;
+			this->labelDethName->Text = L"Смерти:";
+			this->labelDethName->Visible = false;
+			// 
+			// labelDeth
+			// 
+			this->labelDeth->AutoSize = true;
+			this->labelDeth->BackColor = System::Drawing::Color::Transparent;
+			this->labelDeth->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelDeth->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->labelDeth->Location = System::Drawing::Point(119, 9);
+			this->labelDeth->Name = L"labelDeth";
+			this->labelDeth->Size = System::Drawing::Size(25, 25);
+			this->labelDeth->TabIndex = 16;
+			this->labelDeth->Text = L"0";
+			this->labelDeth->Visible = false;
+			// 
+			// labelWinLevelOne
+			// 
+			this->labelWinLevelOne->AutoSize = true;
+			this->labelWinLevelOne->BackColor = System::Drawing::Color::Transparent;
+			this->labelWinLevelOne->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelWinLevelOne->ForeColor = System::Drawing::Color::Red;
+			this->labelWinLevelOne->Location = System::Drawing::Point(271, 76);
+			this->labelWinLevelOne->Name = L"labelWinLevelOne";
+			this->labelWinLevelOne->Size = System::Drawing::Size(24, 31);
+			this->labelWinLevelOne->TabIndex = 17;
+			this->labelWinLevelOne->Text = L"-";
+			this->labelWinLevelOne->Visible = false;
+			// 
+			// labelWinLevelTwo
+			// 
+			this->labelWinLevelTwo->AutoSize = true;
+			this->labelWinLevelTwo->BackColor = System::Drawing::Color::Transparent;
+			this->labelWinLevelTwo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelWinLevelTwo->ForeColor = System::Drawing::Color::Red;
+			this->labelWinLevelTwo->Location = System::Drawing::Point(271, 117);
+			this->labelWinLevelTwo->Name = L"labelWinLevelTwo";
+			this->labelWinLevelTwo->Size = System::Drawing::Size(24, 31);
+			this->labelWinLevelTwo->TabIndex = 18;
+			this->labelWinLevelTwo->Text = L"-";
+			this->labelWinLevelTwo->Visible = false;
+			// 
+			// labelWinLevelThree
+			// 
+			this->labelWinLevelThree->AutoSize = true;
+			this->labelWinLevelThree->BackColor = System::Drawing::Color::Transparent;
+			this->labelWinLevelThree->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelWinLevelThree->ForeColor = System::Drawing::Color::Red;
+			this->labelWinLevelThree->Location = System::Drawing::Point(271, 160);
+			this->labelWinLevelThree->Name = L"labelWinLevelThree";
+			this->labelWinLevelThree->Size = System::Drawing::Size(24, 31);
+			this->labelWinLevelThree->TabIndex = 19;
+			this->labelWinLevelThree->Text = L"-";
+			this->labelWinLevelThree->Visible = false;
+			// 
 			// startMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -193,6 +308,11 @@ namespace graphicsGameSnake {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(434, 361);
+			this->Controls->Add(this->labelWinLevelThree);
+			this->Controls->Add(this->labelWinLevelTwo);
+			this->Controls->Add(this->labelWinLevelOne);
+			this->Controls->Add(this->labelDeth);
+			this->Controls->Add(this->labelDethName);
 			this->Controls->Add(this->labelMenu);
 			this->Controls->Add(this->panelRef);
 			this->Controls->Add(this->buttonExit);

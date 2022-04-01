@@ -1,4 +1,5 @@
 #include "LevelThree.h"
+#include "startMenu.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -26,6 +27,7 @@ static vecPosition vecGameField;
 graphicsGameSnake::LevelThree::LevelThree(void)
 {
 	InitializeComponent();
+	labelDethLevelTree->Text = "" + startMenu::GLDeth;
 	vecGameField.X = RightWall->Location.X;
 	vecGameField.Y = LowerWall->Location.Y;
 	vFirstGame = true;
@@ -60,7 +62,7 @@ void graphicsGameSnake::LevelThree::feedingSnake()
 {
 	if (aSnake[0]->Location.X == positionFruit.X && aSnake[0]->Location.Y == positionFruit.Y)
 	{
-		timer1->Interval -= vEveryEatingSpead;
+		timerLevelThree->Interval -= vEveryEatingSpead;
 		labelScore->Text = "" + ++vGamingScore;
 		if (vGamingScore == vVictoryGamingScore)
 		{
@@ -140,8 +142,8 @@ void graphicsGameSnake::LevelThree::startNewGame()
 	fruitGeneration();
 
 	//init timer
-	timer1->Interval = vGemingSpead;
-	timer1->Start();
+	timerLevelThree->Interval = vGemingSpead;
+	timerLevelThree->Start();
 
 	//starting direction
 	vecPathDirection.X = 1;
@@ -170,8 +172,10 @@ void graphicsGameSnake::LevelThree::LevelThree_Update(Object^ object, EventArgs^
 {
 	if (vGameVictory)
 	{
-		timer1->Stop();
-		MessageBox::Show("VICTORY!", "Attention!");
+		startMenu::labelWinLevelThree->Text = "+";
+		startMenu::labelWinLevelThree->ForeColor = System::Drawing::Color::Green;
+		timerLevelThree->Stop();
+		panelWinLevelThree->Visible = true;
 	}
 	else if (!vSnakeDie && vPlayGame)
 	{
@@ -182,8 +186,11 @@ void graphicsGameSnake::LevelThree::LevelThree_Update(Object^ object, EventArgs^
 	}
 	else if (vSnakeDie && vPlayGame)
 	{
-		timer1->Stop();
-		MessageBox::Show("Game over!", "Attention!");
+		startMenu::GLDeth += 1;
+		startMenu::labelDeth->Text = "" + startMenu::GLDeth;
+		labelDethLevelTree->Text = "" + startMenu::GLDeth;
+		timerLevelThree->Stop();
+		panelLoseLevelThree->Visible = true;
 	}
 
 }
@@ -275,13 +282,29 @@ System::Void graphicsGameSnake::LevelThree::LevelThree_KeyDown(System::Object^ s
 
 System::Void graphicsGameSnake::LevelThree::LevelThree_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e)
 {
-	timer1->Stop();
+	timerLevelThree->Stop();
 	return System::Void();
 }
 
 System::Void graphicsGameSnake::LevelThree::buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	this->Close();
+	return System::Void();
+}
+
+System::Void graphicsGameSnake::LevelThree::buttonWinLevelTree_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Close();
+	return System::Void();
+}
+
+System::Void graphicsGameSnake::LevelThree::buttonLoseLevelTree_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	panelLoseLevelThree->Visible = false;
+	vGameVictory = false;
+	timerLevelThree->Start();
+	vPlayGame = true;
+	startNewGame();
 	return System::Void();
 }
 
@@ -295,7 +318,7 @@ System::Void graphicsGameSnake::LevelThree::LevelThree_Load(System::Object^ send
 System::Void graphicsGameSnake::LevelThree::buttonStart_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	vGameVictory = false;
-	timer1->Start();
+	timerLevelThree->Start();
 	vPlayGame = true;
 	startNewGame();
 	return System::Void();

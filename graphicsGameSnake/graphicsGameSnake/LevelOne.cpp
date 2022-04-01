@@ -1,4 +1,6 @@
 ﻿#include "LevelOne.h"
+#include "startMenu.h"
+
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -26,6 +28,7 @@ static vecPosition vecGameField;
 graphicsGameSnake::LevelOne::LevelOne(void)
 {
 	InitializeComponent();
+	labelDethLevelOne->Text = "" + startMenu::GLDeth;
 	vecGameField.X = RightWall->Location.X;
 	vecGameField.Y = LowerWall->Location.Y;
 	vFirstGame = true;
@@ -170,8 +173,10 @@ void graphicsGameSnake::LevelOne::LevelOne_Update(Object^ object, EventArgs^ e)
 {
 	if (vGameVictory)
 	{
+		startMenu::labelWinLevelOne->Text = "+";
+		startMenu::labelWinLevelOne->ForeColor = System::Drawing::Color::Green;
 		timerLevelOne->Stop();
-		MessageBox::Show("VICTORY!", "Attention!");
+		panelWinLevelOne->Visible = true;
 	}
 	else if (!vSnakeDie && vPlayGame)
 	{
@@ -182,8 +187,11 @@ void graphicsGameSnake::LevelOne::LevelOne_Update(Object^ object, EventArgs^ e)
 	}
 	else if (vSnakeDie && vPlayGame)
 	{
+		startMenu::GLDeth +=1;
+		startMenu::labelDeth->Text = "" + startMenu::GLDeth;
+		labelDethLevelOne->Text = "" + startMenu::GLDeth;
 		timerLevelOne->Stop();
-		MessageBox::Show("Game over!", "Attention!");
+		panelLoseLevelOne->Visible = true;
 	}
 
 }
@@ -285,6 +293,23 @@ System::Void graphicsGameSnake::LevelOne::buttonBackToMenu_Click(System::Object^
 	return System::Void();
 }
 
+System::Void graphicsGameSnake::LevelOne::buttonWinLevelOne_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Close();
+	return System::Void();
+}
+
+System::Void graphicsGameSnake::LevelOne::buttonLoseLevelOne_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	panelLoseLevelOne->Visible = false;
+	vGameVictory = false;
+	timerLevelOne->Start();
+	vPlayGame = true;
+	startNewGame();
+	return System::Void();
+}
+
+
 
 System::Void graphicsGameSnake::LevelOne::LevelOne_Load(System::Object^ sender, System::EventArgs^ e)
 {
@@ -300,3 +325,5 @@ System::Void graphicsGameSnake::LevelOne::buttonStart_Click(System::Object^ send
 	startNewGame();
 	return System::Void();
 }
+
+

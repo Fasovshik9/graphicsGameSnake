@@ -1,4 +1,5 @@
 #include "LevelThree.h"
+#include "startMenu.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -170,6 +171,8 @@ void graphicsGameSnake::LevelThree::LevelThree_Update(Object^ object, EventArgs^
 {
 	if (vGameVictory)
 	{
+		startMenu::labelWinLevelThree->Text = "+";
+		startMenu::labelWinLevelThree->ForeColor = System::Drawing::Color::Green;
 		timer1->Stop();
 		MessageBox::Show("VICTORY!", "Attention!");
 	}
@@ -182,6 +185,8 @@ void graphicsGameSnake::LevelThree::LevelThree_Update(Object^ object, EventArgs^
 	}
 	else if (vSnakeDie && vPlayGame)
 	{
+		startMenu::GLDeth += 1;
+		startMenu::labelDeth->Text = "" + startMenu::GLDeth;
 		timer1->Stop();
 		MessageBox::Show("Game over!", "Attention!");
 	}

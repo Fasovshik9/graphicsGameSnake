@@ -47,6 +47,25 @@ namespace graphicsGameSnake {
 	private: System::Windows::Forms::Button^ buttonBackToMenu;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
+	public: System::Windows::Forms::Label^ labelDethLevelOne;
+	private:
+	private: System::Windows::Forms::Label^ labelDethNameLevelOne;
+	private: System::Windows::Forms::Panel^ panelWinLevelOne;
+	private: System::Windows::Forms::Button^ buttonWinLevelOne;
+	private: System::Windows::Forms::Label^ labelWinShow;
+	private: System::Windows::Forms::Panel^ panelLoseLevelOne;
+
+	private: System::Windows::Forms::Label^ label3;
+
+	private: System::Windows::Forms::Button^ buttonLoseLevelOne;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label4;
+
+
+
+
+
+	public:
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -75,10 +94,22 @@ namespace graphicsGameSnake {
 			this->buttonBackToMenu = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->labelDethLevelOne = (gcnew System::Windows::Forms::Label());
+			this->labelDethNameLevelOne = (gcnew System::Windows::Forms::Label());
+			this->panelWinLevelOne = (gcnew System::Windows::Forms::Panel());
+			this->labelWinShow = (gcnew System::Windows::Forms::Label());
+			this->buttonWinLevelOne = (gcnew System::Windows::Forms::Button());
+			this->panelLoseLevelOne = (gcnew System::Windows::Forms::Panel());
+			this->buttonLoseLevelOne = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RightWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->UpperWall))->BeginInit();
+			this->panelWinLevelOne->SuspendLayout();
+			this->panelLoseLevelOne->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// buttonStart
@@ -207,6 +238,152 @@ namespace graphicsGameSnake {
 			this->label2->TabIndex = 19;
 			this->label2->Text = L"Очки: ";
 			// 
+			// labelDethLevelOne
+			// 
+			this->labelDethLevelOne->AutoSize = true;
+			this->labelDethLevelOne->BackColor = System::Drawing::Color::Transparent;
+			this->labelDethLevelOne->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelDethLevelOne->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->labelDethLevelOne->Location = System::Drawing::Point(250, 9);
+			this->labelDethLevelOne->Name = L"labelDethLevelOne";
+			this->labelDethLevelOne->Size = System::Drawing::Size(25, 25);
+			this->labelDethLevelOne->TabIndex = 21;
+			this->labelDethLevelOne->Text = L"0";
+			this->labelDethLevelOne->Visible = false;
+			// 
+			// labelDethNameLevelOne
+			// 
+			this->labelDethNameLevelOne->AutoSize = true;
+			this->labelDethNameLevelOne->BackColor = System::Drawing::Color::Transparent;
+			this->labelDethNameLevelOne->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelDethNameLevelOne->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->labelDethNameLevelOne->Location = System::Drawing::Point(143, 9);
+			this->labelDethNameLevelOne->Name = L"labelDethNameLevelOne";
+			this->labelDethNameLevelOne->Size = System::Drawing::Size(101, 25);
+			this->labelDethNameLevelOne->TabIndex = 20;
+			this->labelDethNameLevelOne->Text = L"Смерти:";
+			this->labelDethNameLevelOne->Visible = false;
+			// 
+			// panelWinLevelOne
+			// 
+			this->panelWinLevelOne->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panelWinLevelOne->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelWinLevelOne.BackgroundImage")));
+			this->panelWinLevelOne->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panelWinLevelOne->Controls->Add(this->labelWinShow);
+			this->panelWinLevelOne->Controls->Add(this->buttonWinLevelOne);
+			this->panelWinLevelOne->Location = System::Drawing::Point(0, 0);
+			this->panelWinLevelOne->Name = L"panelWinLevelOne";
+			this->panelWinLevelOne->Size = System::Drawing::Size(300, 430);
+			this->panelWinLevelOne->TabIndex = 22;
+			this->panelWinLevelOne->Visible = false;
+			// 
+			// labelWinShow
+			// 
+			this->labelWinShow->AutoSize = true;
+			this->labelWinShow->BackColor = System::Drawing::Color::Transparent;
+			this->labelWinShow->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelWinShow->ForeColor = System::Drawing::Color::Green;
+			this->labelWinShow->Location = System::Drawing::Point(18, 163);
+			this->labelWinShow->Name = L"labelWinShow";
+			this->labelWinShow->Size = System::Drawing::Size(271, 50);
+			this->labelWinShow->TabIndex = 17;
+			this->labelWinShow->Text = L"Поздравляю вы прошли\r\n     первый уровень!";
+			// 
+			// buttonWinLevelOne
+			// 
+			this->buttonWinLevelOne->BackColor = System::Drawing::Color::Transparent;
+			this->buttonWinLevelOne->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->buttonWinLevelOne->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gray;
+			this->buttonWinLevelOne->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonWinLevelOne->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonWinLevelOne->ForeColor = System::Drawing::Color::Black;
+			this->buttonWinLevelOne->Location = System::Drawing::Point(75, 373);
+			this->buttonWinLevelOne->Name = L"buttonWinLevelOne";
+			this->buttonWinLevelOne->Size = System::Drawing::Size(137, 26);
+			this->buttonWinLevelOne->TabIndex = 16;
+			this->buttonWinLevelOne->Text = L"Закрыть";
+			this->buttonWinLevelOne->UseVisualStyleBackColor = false;
+			this->buttonWinLevelOne->Click += gcnew System::EventHandler(this, &LevelOne::buttonWinLevelOne_Click);
+			// 
+			// panelLoseLevelOne
+			// 
+			this->panelLoseLevelOne->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panelLoseLevelOne->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelLoseLevelOne.BackgroundImage")));
+			this->panelLoseLevelOne->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panelLoseLevelOne->Controls->Add(this->label5);
+			this->panelLoseLevelOne->Controls->Add(this->label4);
+			this->panelLoseLevelOne->Controls->Add(this->buttonLoseLevelOne);
+			this->panelLoseLevelOne->Controls->Add(this->label3);
+			this->panelLoseLevelOne->Location = System::Drawing::Point(0, 0);
+			this->panelLoseLevelOne->Name = L"panelLoseLevelOne";
+			this->panelLoseLevelOne->Size = System::Drawing::Size(300, 430);
+			this->panelLoseLevelOne->TabIndex = 23;
+			this->panelLoseLevelOne->Visible = false;
+			// 
+			// buttonLoseLevelOne
+			// 
+			this->buttonLoseLevelOne->BackColor = System::Drawing::Color::Transparent;
+			this->buttonLoseLevelOne->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->buttonLoseLevelOne->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gray;
+			this->buttonLoseLevelOne->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonLoseLevelOne->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonLoseLevelOne->ForeColor = System::Drawing::Color::Black;
+			this->buttonLoseLevelOne->Location = System::Drawing::Point(75, 373);
+			this->buttonLoseLevelOne->Name = L"buttonLoseLevelOne";
+			this->buttonLoseLevelOne->Size = System::Drawing::Size(137, 26);
+			this->buttonLoseLevelOne->TabIndex = 18;
+			this->buttonLoseLevelOne->Text = L"Новая игра";
+			this->buttonLoseLevelOne->UseVisualStyleBackColor = false;
+			this->buttonLoseLevelOne->Click += gcnew System::EventHandler(this, &LevelOne::buttonLoseLevelOne_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::Black;
+			this->label3->Location = System::Drawing::Point(70, 173);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(170, 25);
+			this->label3->TabIndex = 17;
+			this->label3->Text = L"Вы проиграли!";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::Black;
+			this->label4->Location = System::Drawing::Point(38, 211);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(241, 25);
+			this->label4->TabIndex = 19;
+			this->label4->Text = L"Не расстраивайтесь!";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::Black;
+			this->label5->Location = System::Drawing::Point(30, 236);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(245, 25);
+			this->label5->TabIndex = 20;
+			this->label5->Text = L"Попробуйте ещё раз!";
+			// 
 			// LevelOne
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -214,6 +391,10 @@ namespace graphicsGameSnake {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(300, 430);
+			this->Controls->Add(this->panelLoseLevelOne);
+			this->Controls->Add(this->panelWinLevelOne);
+			this->Controls->Add(this->labelDethLevelOne);
+			this->Controls->Add(this->labelDethNameLevelOne);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->buttonBackToMenu);
@@ -238,6 +419,10 @@ namespace graphicsGameSnake {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftWall))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerWall))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->UpperWall))->EndInit();
+			this->panelWinLevelOne->ResumeLayout(false);
+			this->panelWinLevelOne->PerformLayout();
+			this->panelLoseLevelOne->ResumeLayout(false);
+			this->panelLoseLevelOne->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -272,5 +457,7 @@ namespace graphicsGameSnake {
 	private: System::Void LevelOne_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e);
 	private: System::Void LevelOne_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
 	private: System::Void buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonWinLevelOne_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonLoseLevelOne_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

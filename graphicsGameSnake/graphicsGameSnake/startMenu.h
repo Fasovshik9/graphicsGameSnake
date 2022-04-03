@@ -46,7 +46,15 @@ namespace graphicsGameSnake {
 		static  System::Windows::Forms::Label^ labelWinLevelOne;
 		static  System::Windows::Forms::Label^ labelWinLevelTwo;
 		static  System::Windows::Forms::Label^ labelWinLevelThree;
-		static System::Windows::Forms::Label^ labelDeth;
+		static  System::Windows::Forms::Label^ labelDeth;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ labelDethName;
 	public:
 
@@ -234,6 +242,7 @@ namespace graphicsGameSnake {
 			this->labelDethName->Size = System::Drawing::Size(101, 25);
 			this->labelDethName->TabIndex = 15;
 			this->labelDethName->Text = L"Смерти:";
+			this->labelDethName->Visible = false;
 			// 
 			// labelDeth
 			// 
@@ -248,6 +257,7 @@ namespace graphicsGameSnake {
 			this->labelDeth->Size = System::Drawing::Size(25, 25);
 			this->labelDeth->TabIndex = 16;
 			this->labelDeth->Text = L"0";
+			this->labelDeth->Visible = false;
 			// 
 			// labelWinLevelOne
 			// 
@@ -261,6 +271,7 @@ namespace graphicsGameSnake {
 			this->labelWinLevelOne->Size = System::Drawing::Size(24, 31);
 			this->labelWinLevelOne->TabIndex = 17;
 			this->labelWinLevelOne->Text = L"-";
+			this->labelWinLevelOne->Visible = false;
 			// 
 			// labelWinLevelTwo
 			// 
@@ -274,6 +285,7 @@ namespace graphicsGameSnake {
 			this->labelWinLevelTwo->Size = System::Drawing::Size(24, 31);
 			this->labelWinLevelTwo->TabIndex = 18;
 			this->labelWinLevelTwo->Text = L"-";
+			this->labelWinLevelTwo->Visible = false;
 			// 
 			// labelWinLevelThree
 			// 
@@ -287,6 +299,7 @@ namespace graphicsGameSnake {
 			this->labelWinLevelThree->Size = System::Drawing::Size(24, 31);
 			this->labelWinLevelThree->TabIndex = 19;
 			this->labelWinLevelThree->Text = L"-";
+			this->labelWinLevelThree->Visible = false;
 			// 
 			// startMenu
 			// 

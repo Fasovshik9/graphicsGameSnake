@@ -40,11 +40,31 @@ namespace graphicsGameSnake {
 	private: System::Windows::Forms::PictureBox^ UpperWall;
 
 	private: System::Windows::Forms::Label^ labelScore;
-	private: System::Windows::Forms::Timer^ timer1;
+	private: System::Windows::Forms::Timer^ timerLevelThree;
+
 	private: System::Windows::Forms::Label^ labelScoreNeed;
 	private: System::Windows::Forms::Button^ buttonBackToMenu;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
+	public: System::Windows::Forms::Label^ labelDethLevelTree;
+	private:
+
+	private: System::Windows::Forms::Label^ labelDethNameLevelTree;
+	private: System::Windows::Forms::Panel^ panelWinLevelThree;
+	private: System::Windows::Forms::Label^ labelWinShow;
+	private: System::Windows::Forms::Button^ buttonWinLevelTree;
+	private: System::Windows::Forms::Panel^ panelLoseLevelThree;
+	private: System::Windows::Forms::Button^ buttonLoseLevelTree;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label3;
+
+
+
+	public:
+	private:
+
+	public:
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -68,15 +88,27 @@ namespace graphicsGameSnake {
 			this->LowerWall = (gcnew System::Windows::Forms::PictureBox());
 			this->UpperWall = (gcnew System::Windows::Forms::PictureBox());
 			this->labelScore = (gcnew System::Windows::Forms::Label());
-			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timerLevelThree = (gcnew System::Windows::Forms::Timer(this->components));
 			this->labelScoreNeed = (gcnew System::Windows::Forms::Label());
 			this->buttonBackToMenu = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->labelDethLevelTree = (gcnew System::Windows::Forms::Label());
+			this->labelDethNameLevelTree = (gcnew System::Windows::Forms::Label());
+			this->panelWinLevelThree = (gcnew System::Windows::Forms::Panel());
+			this->labelWinShow = (gcnew System::Windows::Forms::Label());
+			this->buttonWinLevelTree = (gcnew System::Windows::Forms::Button());
+			this->panelLoseLevelThree = (gcnew System::Windows::Forms::Panel());
+			this->buttonLoseLevelTree = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->RightWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerWall))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->UpperWall))->BeginInit();
+			this->panelWinLevelThree->SuspendLayout();
+			this->panelLoseLevelThree->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// buttonStart
@@ -147,9 +179,9 @@ namespace graphicsGameSnake {
 			this->labelScore->TabIndex = 25;
 			this->labelScore->Text = L"0";
 			// 
-			// timer1
+			// timerLevelThree
 			// 
-			this->timer1->Tick += gcnew System::EventHandler(this, &LevelThree::LevelThree_Update);
+			this->timerLevelThree->Tick += gcnew System::EventHandler(this, &LevelThree::LevelThree_Update);
 			// 
 			// labelScoreNeed
 			// 
@@ -203,12 +235,161 @@ namespace graphicsGameSnake {
 			this->label1->TabIndex = 34;
 			this->label1->Text = L"Цель:";
 			// 
+			// labelDethLevelTree
+			// 
+			this->labelDethLevelTree->AutoSize = true;
+			this->labelDethLevelTree->BackColor = System::Drawing::Color::Transparent;
+			this->labelDethLevelTree->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelDethLevelTree->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->labelDethLevelTree->Location = System::Drawing::Point(334, 9);
+			this->labelDethLevelTree->Name = L"labelDethLevelTree";
+			this->labelDethLevelTree->Size = System::Drawing::Size(25, 25);
+			this->labelDethLevelTree->TabIndex = 41;
+			this->labelDethLevelTree->Text = L"0";
+			this->labelDethLevelTree->Visible = false;
+			// 
+			// labelDethNameLevelTree
+			// 
+			this->labelDethNameLevelTree->AutoSize = true;
+			this->labelDethNameLevelTree->BackColor = System::Drawing::Color::Transparent;
+			this->labelDethNameLevelTree->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelDethNameLevelTree->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->labelDethNameLevelTree->Location = System::Drawing::Point(227, 9);
+			this->labelDethNameLevelTree->Name = L"labelDethNameLevelTree";
+			this->labelDethNameLevelTree->Size = System::Drawing::Size(101, 25);
+			this->labelDethNameLevelTree->TabIndex = 40;
+			this->labelDethNameLevelTree->Text = L"Смерти:";
+			this->labelDethNameLevelTree->Visible = false;
+			// 
+			// panelWinLevelThree
+			// 
+			this->panelWinLevelThree->BackColor = System::Drawing::Color::White;
+			this->panelWinLevelThree->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelWinLevelThree.BackgroundImage")));
+			this->panelWinLevelThree->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panelWinLevelThree->Controls->Add(this->labelWinShow);
+			this->panelWinLevelThree->Controls->Add(this->buttonWinLevelTree);
+			this->panelWinLevelThree->Location = System::Drawing::Point(0, 0);
+			this->panelWinLevelThree->Name = L"panelWinLevelThree";
+			this->panelWinLevelThree->Size = System::Drawing::Size(400, 536);
+			this->panelWinLevelThree->TabIndex = 42;
+			this->panelWinLevelThree->Visible = false;
+			// 
+			// labelWinShow
+			// 
+			this->labelWinShow->AutoSize = true;
+			this->labelWinShow->BackColor = System::Drawing::Color::Transparent;
+			this->labelWinShow->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->labelWinShow->ForeColor = System::Drawing::Color::Green;
+			this->labelWinShow->Location = System::Drawing::Point(70, 225);
+			this->labelWinShow->Name = L"labelWinShow";
+			this->labelWinShow->Size = System::Drawing::Size(271, 50);
+			this->labelWinShow->TabIndex = 17;
+			this->labelWinShow->Text = L"Поздравляю вы прошли\r\n     третий уровень!";
+			// 
+			// buttonWinLevelTree
+			// 
+			this->buttonWinLevelTree->BackColor = System::Drawing::Color::Transparent;
+			this->buttonWinLevelTree->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->buttonWinLevelTree->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gray;
+			this->buttonWinLevelTree->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonWinLevelTree->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonWinLevelTree->ForeColor = System::Drawing::Color::Black;
+			this->buttonWinLevelTree->Location = System::Drawing::Point(130, 466);
+			this->buttonWinLevelTree->Name = L"buttonWinLevelTree";
+			this->buttonWinLevelTree->Size = System::Drawing::Size(137, 26);
+			this->buttonWinLevelTree->TabIndex = 16;
+			this->buttonWinLevelTree->Text = L"Закрыть";
+			this->buttonWinLevelTree->UseVisualStyleBackColor = false;
+			this->buttonWinLevelTree->Click += gcnew System::EventHandler(this, &LevelThree::buttonWinLevelTree_Click);
+			// 
+			// panelLoseLevelThree
+			// 
+			this->panelLoseLevelThree->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panelLoseLevelThree->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelLoseLevelThree.BackgroundImage")));
+			this->panelLoseLevelThree->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panelLoseLevelThree->Controls->Add(this->label5);
+			this->panelLoseLevelThree->Controls->Add(this->label4);
+			this->panelLoseLevelThree->Controls->Add(this->label3);
+			this->panelLoseLevelThree->Controls->Add(this->buttonLoseLevelTree);
+			this->panelLoseLevelThree->Location = System::Drawing::Point(0, 0);
+			this->panelLoseLevelThree->Name = L"panelLoseLevelThree";
+			this->panelLoseLevelThree->Size = System::Drawing::Size(400, 546);
+			this->panelLoseLevelThree->TabIndex = 43;
+			this->panelLoseLevelThree->Visible = false;
+			// 
+			// buttonLoseLevelTree
+			// 
+			this->buttonLoseLevelTree->BackColor = System::Drawing::Color::Transparent;
+			this->buttonLoseLevelTree->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->buttonLoseLevelTree->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gray;
+			this->buttonLoseLevelTree->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonLoseLevelTree->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonLoseLevelTree->ForeColor = System::Drawing::Color::Black;
+			this->buttonLoseLevelTree->Location = System::Drawing::Point(130, 501);
+			this->buttonLoseLevelTree->Name = L"buttonLoseLevelTree";
+			this->buttonLoseLevelTree->Size = System::Drawing::Size(137, 26);
+			this->buttonLoseLevelTree->TabIndex = 18;
+			this->buttonLoseLevelTree->Text = L"Новая игра";
+			this->buttonLoseLevelTree->UseVisualStyleBackColor = false;
+			this->buttonLoseLevelTree->Click += gcnew System::EventHandler(this, &LevelThree::buttonLoseLevelTree_Click);
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::Black;
+			this->label5->Location = System::Drawing::Point(81, 303);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(245, 25);
+			this->label5->TabIndex = 23;
+			this->label5->Text = L"Попробуйте ещё раз!";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::Black;
+			this->label4->Location = System::Drawing::Point(85, 269);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(241, 25);
+			this->label4->TabIndex = 22;
+			this->label4->Text = L"Не расстраивайтесь!";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::Black;
+			this->label3->Location = System::Drawing::Point(117, 183);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(170, 25);
+			this->label3->TabIndex = 21;
+			this->label3->Text = L"Вы проиграли!";
+			// 
 			// LevelThree
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(400, 539);
+			this->Controls->Add(this->panelLoseLevelThree);
+			this->Controls->Add(this->panelWinLevelThree);
+			this->Controls->Add(this->labelDethLevelTree);
+			this->Controls->Add(this->labelDethNameLevelTree);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->buttonBackToMenu);
@@ -233,6 +414,10 @@ namespace graphicsGameSnake {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LeftWall))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LowerWall))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->UpperWall))->EndInit();
+			this->panelWinLevelThree->ResumeLayout(false);
+			this->panelWinLevelThree->PerformLayout();
+			this->panelLoseLevelThree->ResumeLayout(false);
+			this->panelLoseLevelThree->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -247,7 +432,7 @@ namespace graphicsGameSnake {
 	private: int vStep = 20;				//step for one pixel game field	
 	private: float vGemingSpead = 300;		//geming spead		
 	private: int vGamingScore = 0;			//gaming score
-	private: int vVictoryGamingScore = 20;	//gaming score for win
+	private: int vVictoryGamingScore = 15;	//gaming score for win
 	private: int vEveryEatingSpead = 10;	//When the snake it he move fastly
 	private: bool vGameVictory = false;	//gaming score for win
 
@@ -268,5 +453,7 @@ namespace graphicsGameSnake {
 	private: System::Void LevelThree_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e);
 	private: System::Void LevelThree_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e);
 	private: System::Void buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonWinLevelTree_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonLoseLevelTree_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

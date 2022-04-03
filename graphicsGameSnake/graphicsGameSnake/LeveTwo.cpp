@@ -27,6 +27,7 @@ static vecPosition vecGameField;
 graphicsGameSnake::LeveTwo::LeveTwo(void)
 {
 	InitializeComponent();
+	labelDethLevelTwo->Text = "" + startMenu::GLDeth;
 	vecGameField.X = RightWall->Location.X;
 	vecGameField.Y = LowerWall->Location.Y;
 	vFirstGame = true;
@@ -174,7 +175,7 @@ void graphicsGameSnake::LeveTwo::LeveTwo_Update(Object^ object, EventArgs^ e)
 		startMenu::labelWinLevelTwo->Text = "+";
 		startMenu::labelWinLevelTwo->ForeColor = System::Drawing::Color::Green;
 		timerLevelTwo->Stop();
-		MessageBox::Show("VICTORY!", "Attention!");
+		panelWinLevelTwo->Visible = true;
 	}
 	else if (!vSnakeDie && vPlayGame)
 	{
@@ -187,8 +188,9 @@ void graphicsGameSnake::LeveTwo::LeveTwo_Update(Object^ object, EventArgs^ e)
 	{
 		startMenu::GLDeth += 1;
 		startMenu::labelDeth->Text = "" + startMenu::GLDeth;
+		labelDethLevelTwo->Text = "" + startMenu::GLDeth;
 		timerLevelTwo->Stop();
-		MessageBox::Show("Game over!", "Attention!");
+		panelLoseLevelTwo->Visible = true;
 	}
 
 }
@@ -285,6 +287,22 @@ System::Void graphicsGameSnake::LeveTwo::LeveTwo_FormClosing(System::Object^ sen
 }
 
 System::Void graphicsGameSnake::LeveTwo::buttonBackToMenu_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	this->Close();
+	return System::Void();
+}
+
+System::Void graphicsGameSnake::LeveTwo::buttonLoseLevelTwo_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	panelLoseLevelTwo->Visible = false;
+	vGameVictory = false;
+	timerLevelTwo->Start();
+	vPlayGame = true;
+	startNewGame();
+	return System::Void();
+}
+
+System::Void graphicsGameSnake::LeveTwo::buttonWinLevelTwo_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	this->Close();
 	return System::Void();

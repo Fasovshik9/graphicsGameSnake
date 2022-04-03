@@ -1,12 +1,6 @@
-﻿  LevelOne.cpp
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelOne.cpp(21,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelOne.cpp(145,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  LevelThree.cpp
+﻿  LevelThree.cpp
 G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(20,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(144,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  LeveTwo.cpp
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LeveTwo.cpp(20,2): warning C4091: 'static ': ignored on left of 'vecPosition' when no variable is declared
-G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LeveTwo.cpp(144,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\LevelThree.cpp(145,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   startMenu.cpp
 G:\git\graphicsGameSnake\graphicsGameSnake\graphicsGameSnake\startMenu.cpp(10,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   Generating Code...
